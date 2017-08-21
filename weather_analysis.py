@@ -15,6 +15,11 @@ colNames = ('cityName', 'countryCode')
 cities = pd.DataFrame(columns=(colNames))
 print(cities)
 
+for i in range(6):
+	
+	cities.loc[i] = [1, 2]
 
 
+    # Try to append temporary DF to master DF
+print(cities)
 
