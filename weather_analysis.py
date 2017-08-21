@@ -3,10 +3,12 @@ import numpy as np
 import pandas as pd
 import random
 
+from openWeatherMapApiKeys import apiKey
+
 city = citipy.nearest_city(0, 0)
 
-latDim = {'min': -90, 'max': -89.9}
-lngDim = {'min': -180, 'max': -179.9}
+latDim = {'min': -90, 'max': 90}
+lngDim = {'min': -180, 'max': 180}
 
 latVals = np.arange(latDim['min'], latDim['max'], 0.1)
 lngVals = np.arange(lngDim['min'], lngDim['max'], 0.1)
@@ -23,8 +25,7 @@ while counter < 5:
 		pass
 	else:
 		cities.loc[len(cities)] = [city.city_name, city.country_code, randLat, randLng, city.city_name + city.country_code]
-
 	counter += 1
 
-print(cities)
 
+print(apiKey)
