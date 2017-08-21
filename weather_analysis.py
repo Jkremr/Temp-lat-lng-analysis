@@ -11,15 +11,17 @@ lngDim = {'min': -180, 'max': 180}
 latVals = np.arange(latDim['min'], latDim['max'], 0.1)
 lngVals = np.arange(lngDim['min'], lngDim['max'], 0.1)
 
-colNames = ('cityName', 'countryCode')
+colNames = ('cityName', 'countryCode', 'randLat', 'randLng', 'uniqueName')
 cities = pd.DataFrame(columns=(colNames))
-print(cities)
 
-for i in range(6):
-	
-	cities.loc[i] = [1, 2]
+counter = 0
+while counter < 5:
+	randLat = random.choice(latVals)
+	randLng = random.choice(lngVals)
+	city = citipy.nearest_city(randLat, randLng)
 
+	cities.loc[len(cities)] = [city.city_name, city.country_code, randLat, randLng, city.city_name + city.country_code]
+	counter += 1
 
-    # Try to append temporary DF to master DF
 print(cities)
 
