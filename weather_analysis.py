@@ -2,6 +2,8 @@ from citipy import citipy
 import numpy as np
 import pandas as pd
 import random
+import requests as req
+import json
 
 from openWeatherMapApiKeys import apiKey
 
@@ -17,7 +19,7 @@ colNames = ('cityName', 'countryCode', 'randLat', 'randLng', 'uniqueName')
 cities = pd.DataFrame(columns=(colNames))
 
 counter = 0
-while counter < 5:
+while counter < 1:
 	randLat = random.choice(latVals)
 	randLng = random.choice(lngVals)
 	city = citipy.nearest_city(randLat, randLng)
@@ -28,4 +30,17 @@ while counter < 5:
 	counter += 1
 
 
-print(apiKey)
+cities['temp'] = ''
+#'http://api.openweathermap.org/data/2.5/weather?q=luderitzna,na&units=imperial&APPID=key'
+baseUrl = 'http://api.openweathermap.org/data/2.5/weather?q='
+units = 'imperial'
+for index, row in cities.iterrows():
+	url = baseUrl + cities.cityName + ',' + cities.countryCode + '&units=' + units + '&APPID=' + apiKey
+	
+	weather_response = req.get(url[0])
+	weather_json = weather_response.json()
+	print(weather_json)
+	print(url[0])
+
+
+
