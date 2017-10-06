@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<title>Comparisons</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+
+	<main>
+		<div class="navbar navbar-default navbar-wrapper">
+			<div class="col-xs-12">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Latitude and Weather</a>
+				</div>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="./index.html">Home</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Plots<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="./plots/cloud_cover.html">Cloud Cover</a></li>
+							<li><a href="./plots/humidity.html">Humidity</a></li>
+							<li><a href="./plots/temperature.html">Temperature</a></li>
+							<li><a href="./plots/wind_speed.html">Wind Speed</a></li>
+						</ul>
+					</li>
+					<li class="active"><a href="./compare.html">Compare</a></li>
+					<li><a href="./data.html">Data</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="container-fluid weather">
+			<div class="row-fluid">
+				<div class="col-lg-12">
+					<div>
+						<h1>Comparing Latitude vs X</h1>
+						<P>Click on a plot to see in-depth analysis.</P>
+					</div>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="col-md-6">
+					<div>
+						<h2>vs Cloud Cover</h2>
+						<img class="img-responsive" src="./plots/cloud_cover.png">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div>
+						<h2>vs Humidity</h2>
+						<img class="img-responsive" src="./plots/humidity.png">
+					</div>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="col-md-6">
+					<div>
+						<h2>vs Temperature (F)</h2>
+						<img class="img-responsive" src="./plots/temperature.png">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div>
+						<h2>vs Wind Speed (Mph.)</h2>
+						<img class="img-responsive" src="./plots/wind_speed.png">
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
