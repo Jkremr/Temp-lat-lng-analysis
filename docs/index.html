@@ -37,37 +37,44 @@
 					<h1>Analyses</h1>
 					<hr>
 					<img class= "img-responsive" src="./plots/city_distribution.png">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				</div>
+					<p>Here we look at the weather in cities around the world: cloud cover, humidity, temperature and wind speed. You can click on any of the plots to the left to see a more detailed analysis of each dimension. 
+						<h2>Methodology</h2>
+						<p>
+							Points were chosen at random with latitude values between -55 and 65 and longitude values between -140 and 189, to avoid unpopulated areas in the middle of the Pacific Ocean or at extremely high or low latitudes. Using a Citipy, a Python library, the nearest city and country code was identified for each random point. 
+						</p>
+						<p>
+						Using the city names and country codes, calls were made to the Open Weather Map <a href="https://openweathermap.org/">Current Weather Data API</a> to retrieve the weather in that city at the time of execution.  
+						</p>
+					</div>
 
-				<div class="col-lg-4 col-md-4 col-sm-12 weather">
-					<h2>Plots</h2>
-					<hr>
-					<div class="row">
-						<div class="col-lg-6 col-md-6 col-sm-3 col-xs-12">
-							<a href="./plots/cloud_cover.html"><img class="img-responsive" src="./plots/cloud_cover.png" alt="Cloud cover versus latitude."></a>
-						</div>
-						<div class="col-lg-6 col-md-6 col-sm-3 col-xs-12">
-							<a href="./plots/humidity.html">
-								<img class="img-responsive" src="./plots/humidity.png" alt="Humidity versus latitude.">
-							</a>
-						</div>
-						<div class="col-lg-6 col-md-6 col-sm-3 col-xs-12">
-							<a href="./plots/temperature.html">
-								<img class="img-responsive" src="./plots/temperature.png" alt="Temperature versus latitude.">
-							</a>
-						</div>
-						<div class="col-lg-6 col-md-6 col-sm-3 col-xs-12">
-							<a href="./plots/wind_speed.html">
-								<img class="img-responsive" src="./plots/wind_speed.png" alt="Wind speed versus latitude.">
+					<div class="col-lg-4 col-md-4 col-sm-12 weather">
+						<h2>Plots</h2>
+						<hr>
+						<div class="row">
+							<div class="col-lg-6 col-md-6 col-sm-3 col-xs-12">
+								<a href="./plots/cloud_cover.html"><img class="img-responsive" src="./plots/cloud_cover.png" alt="Cloud cover versus latitude."></a>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-3 col-xs-12">
+								<a href="./plots/humidity.html">
+									<img class="img-responsive" src="./plots/humidity.png" alt="Humidity versus latitude.">
+								</a>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-3 col-xs-12">
+								<a href="./plots/temperature.html">
+									<img class="img-responsive" src="./plots/temperature.png" alt="Temperature versus latitude.">
+								</a>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-3 col-xs-12">
+								<a href="./plots/wind_speed.html">
+									<img class="img-responsive" src="./plots/wind_speed.png" alt="Wind speed versus latitude.">
 
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</main>
+	</main>
 </body>
 </html>
